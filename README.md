@@ -1,7 +1,7 @@
 
 # Experimental Design
 
-This project studies the trade-off between feature engineering and model complexity in user preference prediction.
+This project investigates how the introduction of high-dimensional features affects the performance of models with different levels of complexity, and explores whether more complex models can utilize high-dimensional features more effectively to improve prediction performance.
 
 Three levels of feature sets are designed:
 
