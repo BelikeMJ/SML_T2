@@ -13,11 +13,17 @@ Three models with different model complexities are compared.
 
 # FT-Transformer
 
-This project uses the official implementation of FT-Transformer from:
+The advanced model selected in this project is **FT-Transformer**, a Transformer-based architecture designed specifically for tabular data.
 
-- Yandex Research
-- Paper:  
+FT-Transformer was proposed in:
+
+- **NeurIPS 2021**
+- Paper:
   *Revisiting Deep Learning Models for Tabular Data*
+
+According to the paper, FT-Transformer is a simple adaptation of the Transformer architecture for tabular machine learning tasks and demonstrated strong performance across a wide range of datasets. :contentReference[oaicite:1]{index=1}
+
+This project uses the official implementation provided by Yandex Research.
 
 Repository:
 
