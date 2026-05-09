@@ -41,17 +41,17 @@ from rtdl_revisiting_models import FTTransformer
 
 # Hyperparameter Tuning
 
-Hyperparameter tuning was implemented manually.
+Hyperparameter tuning was implemented manually using repeated validation splits.
 
 Examples include:
 
 ## Logistic Regression
 
-- regularization strength
-
-## SVM
-
 - C values
+
+## Linear SVM (Hinge Loss)
+
+- alpha values
 
 ## FT-Transformer
 
@@ -59,15 +59,18 @@ Examples include:
 - weight decay
 
 Multiple candidate values were evaluated for each hyperparameter.
-
 ---
 
 # Evaluation Metrics
 
-The project evaluates models using:
+The project evaluates model performance using:
 
 - Accuracy
 - Precision
 - Recall
 - F1-score
 - ROC-AUC
+- True Positives (TP)
+- True Negatives (TN)
+- False Positives (FP)
+- False Negatives (FN)
