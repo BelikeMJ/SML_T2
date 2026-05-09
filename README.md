@@ -1,3 +1,32 @@
+# Dataset
+
+This project uses the MovieLens 20M dataset published by GroupLens.
+
+Dataset source:
+
+https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset
+
+The project mainly uses the following files:
+
+| File | Main Columns | Description |
+|---|---|---|
+| `rating.csv` | `userId`, `movieId`, `rating`, `timestamp` | User movie rating records |
+| `movie.csv` | `movieId`, `title`, `genres` | Movie metadata and genres |
+| `tag.csv` | `userId`, `movieId`, `tag`, `timestamp` | User-generated movie tags |
+| `genome_scores.csv` | `movieId`, `tagId`, `relevance` | Relevance scores between movies and predefined tags |
+| `genome_tags.csv` | `tagId`, `tag` | Predefined tag vocabulary |
+
+Binary labels are constructed as:
+
+```text
+label = 1 if rating >= 4 else 0
+```
+
+which represents:
+
+- `1` → user likes the movie
+- `0` → user does not like the movie
+
 
 # Experimental Design
 
@@ -26,6 +55,9 @@ The full experimental design compares each feature set with each model:
 | Feature A | Baseline performance using basic features | Improvement from a stronger traditional model | Complex model with basic features |
 | Feature B | Effect of interaction features on a simple model | Combined effect of interaction features and medium model complexity | Complex model with interaction features |
 | Feature C | Whether advanced embeddings can improve a simple model | Traditional model with rich latent features | Highest feature complexity with highest model complexity |
+
+
+
 
 # FT-Transformer
 
