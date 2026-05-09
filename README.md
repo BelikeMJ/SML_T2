@@ -100,7 +100,7 @@ Examples include:
 
 - C values
 
-## Linear SVM (Hinge Loss)
+## Support Vector Machine (Hinge Loss)
 
 - alpha values
 
