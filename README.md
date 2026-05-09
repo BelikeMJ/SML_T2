@@ -4,7 +4,7 @@ To avoid data leakage:
 
 1. The dataset is first split into train/test sets.
 2. All statistical features are computed ONLY from the training set.
-3. The training statistics are then applied to both training and test samples.
+
 
 This ensures:
 
