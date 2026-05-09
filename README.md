@@ -46,9 +46,7 @@ Constructed features include:
 
 Total engineered features:
 
-```text
-14 features
-```
+- `14 features`
 
 ---
 
@@ -56,16 +54,12 @@ Total engineered features:
 
 This project implements:
 
-```text
-10 repeated stratified train/test splits
-```
+- `10 repeated stratified train/test splits`
 
 with:
 
-```text
-80% training
-20% testing
-```
+- `80% training`
+- `20% testing`
 
 Different random seeds are used for each repetition.
 
