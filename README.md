@@ -1,15 +1,31 @@
 
-# Models
+# Experimental Design
 
-Three models with different model complexities are compared.
+This project studies the trade-off between feature engineering and model complexity in user preference prediction.
 
-| Model | Complexity |
-|---|---|
-| Logistic Regression | Simple |
-| Linear SVM (Hinge Loss) | Medium |
-| FT-Transformer | Complex |
+Three levels of feature sets are designed:
 
----
+| Feature Set | Type | Description |
+|---|---|---|
+| Feature A | Basic | Basic statistical features about users and items |
+| Feature B | Interaction | Interaction-based features between users and items |
+| Feature C | Embedding | Latent features learned from collaborative filtering using SVD |
+
+Three models with increasing model complexity are compared:
+
+| Model | Complexity | Description |
+|---|---|---|
+| Logistic Regression | Simple | Linear model with low capacity and high bias |
+| Support Vector Machine | Medium | Margin-based model with stronger decision boundaries |
+| FT-Transformer | Complex | Transformer-based deep learning model for tabular data |
+
+The full experimental design compares each feature set with each model:
+
+| Feature Set | Logistic Regression | Support Vector Machine | FT-Transformer |
+|---|---|---|---|
+| Feature A | Baseline performance using basic features | Improvement from a stronger traditional model | Complex model with basic features |
+| Feature B | Effect of interaction features on a simple model | Combined effect of interaction features and medium model complexity | Complex model with interaction features |
+| Feature C | Whether advanced embeddings can improve a simple model | Traditional model with rich latent features | Highest feature complexity with highest model complexity |
 
 # FT-Transformer
 
