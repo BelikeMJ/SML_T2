@@ -28,6 +28,7 @@ which represents:
 - `0` → user does not like the movie
 
 The task is formulated as a binary classification problem that predicts whether a user likes a movie based on user-item interactions and engineered features.
+
 ---
 
 # Experimental Design
