@@ -12,6 +12,8 @@ This ensures:
 - fair evaluation
 - correct machine learning workflow
 
+---
+
 # Feature A Construction 
 
 Feature A focuses on statistical and behavioral features extracted from historical user and movie interactions.
