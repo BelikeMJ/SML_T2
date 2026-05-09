@@ -27,6 +27,7 @@ which represents:
 - `1` → user likes the movie
 - `0` → user does not like the movie
 
+---
 
 # Experimental Design
 
@@ -57,7 +58,7 @@ The full experimental design compares each feature set with each model:
 | Feature C | Whether advanced embeddings can improve a simple model | Traditional model with rich latent features | Highest feature complexity with highest model complexity |
 
 
-
+---
 
 # FT-Transformer
 
