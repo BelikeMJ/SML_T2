@@ -56,7 +56,7 @@ Examples include:
 ## FT-Transformer
 
 - learning rate
-- weight decay
+
 
 Multiple candidate values were evaluated for each hyperparameter.
 ---
