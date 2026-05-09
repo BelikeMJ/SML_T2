@@ -17,11 +17,11 @@ The advanced model selected in this project is **FT-Transformer**, a Transformer
 
 FT-Transformer was proposed in:
 
-- **NeurIPS 2021**
-- Paper:
-  *Revisiting Deep Learning Models for Tabular Data*
+- NeurIPS 2021
+- Paper: *Revisiting Deep Learning Models for Tabular Data*
+- Poster:
+  https://neurips.cc/virtual/2021/poster/26866
 
-According to the paper, FT-Transformer is a simple adaptation of the Transformer architecture for tabular machine learning tasks and demonstrated strong performance across a wide range of datasets. :contentReference[oaicite:1]{index=1}
 
 This project uses the official implementation provided by Yandex Research.
 
