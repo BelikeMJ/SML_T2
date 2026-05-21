@@ -1,0 +1,11 @@
+﻿repeat,train_rows,test_rows,train_like_ratio,test_like_ratio,global_mean_from_train,feature_count_excluding_ids_and_label,feature_train_path,feature_test_path
+1,160000,39999,0.4997625,0.49976249406235157,3.527459375,119,FeatureB_Repeated/repeat_01/feature_B_train.csv,FeatureB_Repeated/repeat_01/feature_B_test.csv
+2,160000,39999,0.4997625,0.49976249406235157,3.5268375,119,FeatureB_Repeated/repeat_02/feature_B_train.csv,FeatureB_Repeated/repeat_02/feature_B_test.csv
+3,160000,39999,0.4997625,0.49976249406235157,3.526278125,119,FeatureB_Repeated/repeat_03/feature_B_train.csv,FeatureB_Repeated/repeat_03/feature_B_test.csv
+4,160000,39999,0.4997625,0.49976249406235157,3.526825,119,FeatureB_Repeated/repeat_04/feature_B_train.csv,FeatureB_Repeated/repeat_04/feature_B_test.csv
+5,160000,39999,0.4997625,0.49976249406235157,3.52686875,119,FeatureB_Repeated/repeat_05/feature_B_train.csv,FeatureB_Repeated/repeat_05/feature_B_test.csv
+6,160000,39999,0.4997625,0.49976249406235157,3.525725,119,FeatureB_Repeated/repeat_06/feature_B_train.csv,FeatureB_Repeated/repeat_06/feature_B_test.csv
+7,160000,39999,0.4997625,0.49976249406235157,3.5270375,119,FeatureB_Repeated/repeat_07/feature_B_train.csv,FeatureB_Repeated/repeat_07/feature_B_test.csv
+8,160000,39999,0.4997625,0.49976249406235157,3.525859375,119,FeatureB_Repeated/repeat_08/feature_B_train.csv,FeatureB_Repeated/repeat_08/feature_B_test.csv
+9,160000,39999,0.4997625,0.49976249406235157,3.526771875,119,FeatureB_Repeated/repeat_09/feature_B_train.csv,FeatureB_Repeated/repeat_09/feature_B_test.csv
+10,160000,39999,0.4997625,0.49976249406235157,3.525478125,119,FeatureB_Repeated/repeat_10/feature_B_train.csv,FeatureB_Repeated/repeat_10/feature_B_test.csv
