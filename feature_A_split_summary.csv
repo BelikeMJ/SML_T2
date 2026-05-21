@@ -1,0 +1,11 @@
+﻿repeat,train_rows,test_rows,train_like_ratio,test_like_ratio,global_mean_from_train,feature_count_excluding_ids_and_label,feature_train_path,feature_test_path
+1,16000211,4000052,0.4997639093634453,0.4997640030679601,3.525512726050925,14,D:\墨大sml作业\FeatureA_Repeated\repeat_01\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_01\feature_A_test.csv
+2,16000211,4000052,0.4997639093634453,0.4997640030679601,3.5253623530339695,14,D:\墨大sml作业\FeatureA_Repeated\repeat_02\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_02\feature_A_test.csv
+3,16000211,4000052,0.4997639093634453,0.4997640030679601,3.525606256067498,14,D:\墨大sml作业\FeatureA_Repeated\repeat_03\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_03\feature_A_test.csv
+4,16000211,4000052,0.4997639093634453,0.4997640030679601,3.5256897549663564,14,D:\墨大sml作业\FeatureA_Repeated\repeat_04\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_04\feature_A_test.csv
+5,16000211,4000052,0.4997639093634453,0.4997640030679601,3.525513726037738,14,D:\墨大sml作业\FeatureA_Repeated\repeat_05\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_05\feature_A_test.csv
+6,16000211,4000052,0.4997639093634453,0.4997640030679601,3.5255525067763167,14,D:\墨大sml作业\FeatureA_Repeated\repeat_06\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_06\feature_A_test.csv
+7,16000211,4000052,0.4997639093634453,0.4997640030679601,3.5255040074159023,14,D:\墨大sml作业\FeatureA_Repeated\repeat_07\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_07\feature_A_test.csv
+8,16000211,4000052,0.4997639093634453,0.4997640030679601,3.5254804764762167,14,D:\墨大sml作业\FeatureA_Repeated\repeat_08\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_08\feature_A_test.csv
+9,16000211,4000052,0.4997639093634453,0.4997640030679601,3.5256005061433253,14,D:\墨大sml作业\FeatureA_Repeated\repeat_09\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_09\feature_A_test.csv
+10,16000211,4000052,0.4997639093634453,0.4997640030679601,3.525515694761775,14,D:\墨大sml作业\FeatureA_Repeated\repeat_10\feature_A_train.csv,D:\墨大sml作业\FeatureA_Repeated\repeat_10\feature_A_test.csv
