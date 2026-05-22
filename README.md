@@ -94,87 +94,22 @@ from rtdl_revisiting_models import FTTransformer
 
 Hyperparameter tuning was implemented manually using repeated nested validation splits.
 
-For the main same-seed sampled experiments, all models were evaluated using:
+For the main same-seed sampled experiments:
 
-- `10 repeated outer stratified train/test splits`
+- `10 repeated outer train/test splits` were used for evaluation
+- `3 repeated inner train/validation splits` were used for hyperparameter tuning
 
-Hyperparameters were selected using:
+All splits were implemented completely from scratch without third-party cross-validation utilities.
 
-- `3 repeated inner train/validation splits`
-
-implemented completely from scratch without using third-party cross-validation utilities.
-
-This nested repeated evaluation design provides:
-
-- leakage-safe evaluation
-- fair model comparison
-- stable repeated evaluation
-- reduced randomness from a single split
-- consistent train/test splits across Feature A, Feature B, and Feature C
+The same repeated splits were shared across Feature A, Feature B, and Feature C to ensure fair comparison.
 
 ---
 
-## Logistic Regression
+The following models were tuned using repeated inner validation splits:
 
-The Logistic Regression model was tuned using repeated inner validation splits.
-
-Tuned hyperparameter:
-
-- `C`
-
-Candidate values:
-
-```python
-C_VALUES = [0.1, 1, 10]
-```
-
-The best `C` value was selected using mean validation F1-score across repeated inner splits.
-
----
-
-## Hinge-loss Linear SVM
-
-The Hinge-loss Linear SVM model was implemented using:
-
-```python
-SGDClassifier(loss="hinge")
-```
-
-The model was tuned using repeated inner validation splits.
-
-Tuned hyperparameter:
-
-- `alpha`
-
-Candidate values:
-
-```python
-ALPHA_VALUES = [1e-5, 1e-4, 1e-3]
-```
-
-The best `alpha` value was selected using mean validation F1-score across repeated inner splits.
-
----
-
-## FT-Transformer
-
-The FT-Transformer model was tuned using repeated inner validation splits.
-
-Tuned hyperparameters:
-
-- `learning rate`
-- `weight decay`
-
-Candidate values:
-
-```python
-LR_VALUES = [5e-5, 1e-4, 5e-4]
-WEIGHT_DECAY_VALUES = [1e-5]
-```
-
-The best hyperparameter combination was selected using mean validation F1-score across repeated inner splits.
-
-The implementation uses the official FT-Transformer architecture provided by Yandex Research.
+- Logistic Regression
+- Hinge-loss Linear SVM
+- FT-Transformer
 
 ---
 # Evaluation Metrics
