@@ -1,4 +1,5 @@
-# Leakage-Safe Data Pipeline
+# Feature A — Basic Statistical Features
+## Leakage-Safe Data Pipeline
 
 To avoid data leakage:
 
@@ -15,7 +16,7 @@ This ensures:
 
 ---
 
-# Experimental Settings
+## Experimental Settings
 
 Two Feature A experimental settings are provided in this repository.
 
