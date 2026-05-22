@@ -164,6 +164,28 @@ For each repeat, the following files are saved:
 - `feature_B_train.csv`
 - `feature_B_test.csv`
 
+---
+
+# Main Experimental Results
+
+The following results are based on the repeated same-seed sampled setting and are averaged across 10 repeated experiments.
+
+| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|---|---|---|---|---|---|
+| Logistic Regression | 0.6223 ± 0.0035 | 0.6310 ± 0.0031 | 0.5884 ± 0.0096 | 0.6089 ± 0.0058 | 0.6474 ± 0.0022 |
+| Hinge-loss Linear SVM | 0.6302 ± 0.0059 | 0.6344 ± 0.0060 | 0.6137 ± 0.0094 | 0.6238 ± 0.0069 | 0.6636 ± 0.0072 |
+| FT-Transformer | 0.6345 ± 0.0087 | 0.6398 ± 0.0090 | 0.6168 ± 0.0578 | 0.6265 ± 0.0274 | 0.6542 ± 0.0083 |
+
+---
+
+# Experimental Observations
+
+- Feature B introduces substantially higher-dimensional engineered interaction features compared with Feature A.
+- FT-Transformer achieved the strongest overall accuracy under Feature B, suggesting that higher-capacity models can better exploit complex interaction-based features.
+- Hinge-loss Linear SVM achieved competitive performance across all evaluation metrics.
+- Logistic Regression remained relatively stable but showed weaker performance compared with higher-capacity models.
+- The increased variance of FT-Transformer indicates higher sensitivity to sampled training distributions under repeated experiments.
+
 A summary file is also saved:
 
 - `feature_B_split_summary.csv`
