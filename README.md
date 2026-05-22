@@ -14,11 +14,51 @@ This ensures:
 
 ---
 
-Two Feature A experimental settings are provided:
+---
 
-1. Full-dataset splits using the original MovieLens ratings dataset.
-2. Same-seed sampled splits aligned with Feature B and Feature C for fair feature-complexity comparison.
+# Experimental Settings
 
+Two Feature A experimental settings are provided in this repository.
+
+## 1. Full-Dataset Setting
+
+This setting uses the original MovieLens ratings dataset without sampling.
+
+Characteristics:
+
+- larger training scale
+- higher data coverage
+- stronger statistical stability
+- higher overall predictive accuracy
+
+Files related to this setting include:
+
+- `LR_FeatureA_FullDataset.ipynb`
+- `SVM_FeatureA_FullDataset.ipynb`
+- `FT_FeatureA_FullDataset.ipynb`
+
+---
+
+## 2. Same-Seed Sampled Setting
+
+This setting uses stratified sampled splits aligned with Feature B and Feature C.
+
+Characteristics:
+
+- same random seeds
+- same repeated train/test splits
+- fair feature-complexity comparison
+- controlled experimental setting
+
+Files related to this setting include:
+
+- `LR_FeatureA_SameSeedSampled.ipynb`
+- `SVM_FeatureA_SameSeedSampled.ipynb`
+- `FT_FeatureA_SameSeedSampled.ipynb`
+
+This setting is used as the main experimental configuration for comparing Feature A, Feature B, and Feature C.
+
+---
 
 # Feature A Construction 
 
