@@ -16,11 +16,11 @@ This ensures:
 
 ---
 
-## Experimental Settings
+### Experimental Settings
 
 Two Feature A experimental settings are provided in this repository.
 
-## 1. Full-Dataset Setting
+### 1. Full-Dataset Setting
 
 This setting uses the original MovieLens ratings dataset without sampling.
 
@@ -39,7 +39,7 @@ Files related to this setting include:
 
 ---
 
-## 2. Same-Seed Sampled Setting
+### 2. Same-Seed Sampled Setting
 
 This setting uses stratified sampled splits aligned with Feature B and Feature C.
 
@@ -60,13 +60,13 @@ This setting is used as the main experimental configuration for comparing Featur
 
 ---
 
-# Feature A Construction 
+## Feature A Construction 
 
 Feature A focuses on statistical and behavioral features extracted from historical user and movie interactions.
 
 Constructed features include:
 
-## User Features
+### User Features
 
 - `user_avg_rating`
 - `user_rating_count`
@@ -76,7 +76,7 @@ Constructed features include:
 - `user_rating_timespan`
 - `user_avg_gap_days`
 
-## Movie Features
+### Movie Features
 
 - `item_avg_rating`
 - `item_rating_count`
@@ -84,11 +84,11 @@ Constructed features include:
 - `item_like_count`
 - `item_like_ratio`
 
-## Global Features
+### Global Features
 
 - `global_mean`
 
-## Temporal Feature
+### Temporal Feature
 
 - `movie_age_at_rating`
 
@@ -98,7 +98,7 @@ Total engineered features:
 
 ---
 
-# Cross Validation Strategy
+## Cross Validation Strategy
 
 This project implements:
 
@@ -115,13 +115,13 @@ The cross-validation procedure was implemented from scratch without using third-
 
 ---
 
-# Main Experimental Results
+## Main Experimental Results
 
 Two experimental settings are reported for Feature A.
 
 ---
 
-# 1. Full-Dataset Results
+## 1. Full-Dataset Results
 
 The following results are based on the full-dataset setting and are averaged across 10 repeated experiments.
 
@@ -133,7 +133,7 @@ The following results are based on the full-dataset setting and are averaged acr
 
 ---
 
-# 2. Same-Seed Sampled Results
+## 2. Same-Seed Sampled Results
 
 The following results are based on the same-seed sampled setting and are used as the primary experimental configuration for comparing Feature A, Feature B, and Feature C.
 
@@ -145,7 +145,7 @@ The following results are based on the same-seed sampled setting and are used as
 
 ---
 
-# Experimental Observations
+## Experimental Observations
 
 - The full-dataset setting achieved substantially stronger performance due to larger training scale and improved statistical coverage.
 - The same-seed sampled setting is used as the primary experimental configuration for fair comparison across Feature A, Feature B, and Feature C.
