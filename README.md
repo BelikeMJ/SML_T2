@@ -111,3 +111,25 @@ For each repeat, the following files are saved:
 A summary file is also saved:
 
 - `feature_C_split_summary.csv`
+
+---
+
+# Main Experimental Results
+
+The following results are based on the repeated same-seed sampled setting and are averaged across 10 repeated experiments.
+
+| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|---|---|---|---|---|---|
+| Logistic Regression | 0.6375 ± 0.0024 | 0.6453 ± 0.0024 | 0.6097 ± 0.0073 | 0.6270 ± 0.0041 | 0.6741 ± 0.0022 |
+| Hinge-loss Linear SVM | 0.6397 ± 0.0017 | 0.6445 ± 0.0022 | 0.6226 ± 0.0059 | 0.6334 ± 0.0029 | 0.6800 ± 0.0017 |
+| FT-Transformer | 0.6296 ± 0.0092 | 0.6484 ± 0.0078 | 0.5669 ± 0.0505 | 0.6036 ± 0.0270 | 0.6639 ± 0.0093 |
+
+---
+
+# Experimental Observations
+
+- Feature C extends Feature B by introducing high-dimensional SVD collaborative filtering embeddings.
+- Hinge-loss Linear SVM achieved the strongest overall performance under Feature C across most evaluation metrics.
+- Logistic Regression remained competitive despite the substantially increased feature dimensionality.
+- FT-Transformer showed higher variance and lower stability under repeated sampled experiments.
+- The results suggest that the SVD embedding features improved the effectiveness of linear and margin-based models more consistently than the deep tabular model under the current sampled training scale.
