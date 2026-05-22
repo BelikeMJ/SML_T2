@@ -14,6 +14,12 @@ This ensures:
 
 ---
 
+Two Feature A experimental settings are provided:
+
+1. Full-dataset splits using the original MovieLens ratings dataset.
+2. Same-seed sampled splits aligned with Feature B and Feature C for fair feature-complexity comparison.
+
+
 # Feature A Construction 
 
 Feature A focuses on statistical and behavioral features extracted from historical user and movie interactions.
