@@ -126,3 +126,89 @@ The project evaluates model performance using:
 - True Negatives (TN)
 - False Positives (FP)
 - False Negatives (FN)
+
+# Overall Experimental Results
+
+The final experiments investigate how increasing feature complexity affects models with different levels of model complexity under a repeated same-seed sampled experimental setting.
+
+Three feature sets are compared:
+
+- Feature A: basic statistical features
+- Feature B: interaction-based engineered features
+- Feature C: embedding-based latent features using SVD
+
+Three models with increasing complexity are evaluated:
+
+- Logistic Regression (simple)
+- Hinge-loss Linear SVM (medium)
+- FT-Transformer (complex)
+
+All reported results are averaged across 10 repeated stratified train/test splits.
+
+---
+
+## Feature A Results
+
+| Model | Accuracy | F1-score | ROC-AUC |
+|---|---|---|---|
+| Logistic Regression | 0.6344 | 0.6324 | 0.6668 |
+| Hinge-loss Linear SVM | 0.6365 | 0.6336 | 0.6768 |
+| FT-Transformer | 0.6214 | 0.5810 | 0.6437 |
+
+---
+
+## Feature B Results
+
+| Model | Accuracy | F1-score | ROC-AUC |
+|---|---|---|---|
+| Logistic Regression | 0.6223 | 0.6089 | 0.6474 |
+| Hinge-loss Linear SVM | 0.6302 | 0.6238 | 0.6636 |
+| FT-Transformer | 0.6345 | 0.6265 | 0.6542 |
+
+---
+
+## Feature C Results
+
+| Model | Accuracy | F1-score | ROC-AUC |
+|---|---|---|---|
+| Logistic Regression | 0.6375 | 0.6270 | 0.6741 |
+| Hinge-loss Linear SVM | 0.6397 | 0.6334 | 0.6800 |
+| FT-Transformer | 0.6296 | 0.6036 | 0.6639 |
+
+---
+
+## Additional Feature A Full-Dataset Results
+
+Additional experiments were conducted on the original full-dataset setting for Feature A.
+
+The full-dataset setting consistently achieved stronger performance compared with the sampled setting.
+
+| Model | Accuracy | F1-score | ROC-AUC |
+|---|---|---|---|
+| Logistic Regression | 0.7138 | 0.7162 | 0.7876 |
+| Hinge-loss Linear SVM | 0.7137 | 0.7173 | 0.7874 |
+| FT-Transformer | 0.7152 | 0.7233 | 0.7894 |
+
+These results suggest that larger training scale and stronger statistical coverage remain highly important for recommendation tasks.
+
+---
+
+# Overall Experimental Observations
+
+- The experiments investigate how increasing feature complexity affects models with different levels of model complexity.
+- Results show that introducing higher-dimensional engineered features does not always lead to consistent performance improvements across all models.
+- Traditional models such as Logistic Regression and Hinge-loss Linear SVM remained competitive even when using simpler feature sets.
+- More complex models benefited more noticeably from interaction-based and embedding-based features, but also showed higher variance and sensitivity under repeated sampled experiments.
+- Additional experiments comparing the full-dataset and same-seed sampled settings on Feature A showed that larger training scale consistently improved performance across all models.
+- This suggests that dataset scale and statistical coverage remain highly important even when advanced feature engineering and complex models are used.
+- Overall, the results indicate that feature engineering, model complexity, and training data scale should be considered together rather than independently when designing recommendation systems.
+
+---
+
+# Limitations and Future Work
+
+- Due to computational limitations and project time constraints, full-dataset experiments were only conducted for Feature A.
+- Feature B and Feature C contain substantially higher-dimensional engineered features and embedding representations, resulting in significantly higher training cost and runtime.
+- As a result, Feature B and Feature C were evaluated using the repeated same-seed sampled setting instead of the original full dataset.
+- Future work could explore larger-scale training environments or GPU-based distributed training to evaluate whether higher-dimensional features provide greater advantages under full-dataset conditions.
+- Additional future directions may include testing more advanced deep recommendation architectures and exploring alternative collaborative filtering embedding methods.
