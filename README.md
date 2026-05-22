@@ -92,27 +92,91 @@ from rtdl_revisiting_models import FTTransformer
 
 # Hyperparameter Tuning
 
-Hyperparameter tuning was implemented manually using repeated validation splits.
+Hyperparameter tuning was implemented manually using repeated nested validation splits.
 
-Examples include:
+For the main same-seed sampled experiments, all models were evaluated using:
 
-## Logistic Regression
+- `10 repeated outer stratified train/test splits`
 
-- C values
+Hyperparameters were selected using:
 
-## Support Vector Machine (Hinge Loss)
+- `3 repeated inner train/validation splits`
 
-- alpha values
+implemented completely from scratch without using third-party cross-validation utilities.
 
-## FT-Transformer
+This nested repeated evaluation design provides:
 
-- learning rate
-
-
-Multiple candidate values were evaluated for each hyperparameter.
+- leakage-safe evaluation
+- fair model comparison
+- stable repeated evaluation
+- reduced randomness from a single split
+- consistent train/test splits across Feature A, Feature B, and Feature C
 
 ---
 
+## Logistic Regression
+
+The Logistic Regression model was tuned using repeated inner validation splits.
+
+Tuned hyperparameter:
+
+- `C`
+
+Candidate values:
+
+```python
+C_VALUES = [0.1, 1, 10]
+```
+
+The best `C` value was selected using mean validation F1-score across repeated inner splits.
+
+---
+
+## Hinge-loss Linear SVM
+
+The Hinge-loss Linear SVM model was implemented using:
+
+```python
+SGDClassifier(loss="hinge")
+```
+
+The model was tuned using repeated inner validation splits.
+
+Tuned hyperparameter:
+
+- `alpha`
+
+Candidate values:
+
+```python
+ALPHA_VALUES = [1e-5, 1e-4, 1e-3]
+```
+
+The best `alpha` value was selected using mean validation F1-score across repeated inner splits.
+
+---
+
+## FT-Transformer
+
+The FT-Transformer model was tuned using repeated inner validation splits.
+
+Tuned hyperparameters:
+
+- `learning rate`
+- `weight decay`
+
+Candidate values:
+
+```python
+LR_VALUES = [5e-5, 1e-4, 5e-4]
+WEIGHT_DECAY_VALUES = [1e-5]
+```
+
+The best hyperparameter combination was selected using mean validation F1-score across repeated inner splits.
+
+The implementation uses the official FT-Transformer architecture provided by Yandex Research.
+
+---
 # Evaluation Metrics
 
 The project evaluates model performance using:
