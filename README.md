@@ -163,7 +163,10 @@ For each repeat, the following files are saved:
 - `raw_test.csv`
 - `feature_B_train.csv`
 - `feature_B_test.csv`
+  
+A summary file is also saved:
 
+- `feature_B_split_summary.csv`
 ---
 
 # Main Experimental Results
@@ -186,6 +189,4 @@ The following results are based on the repeated same-seed sampled setting and ar
 - Logistic Regression remained relatively stable but showed weaker performance compared with higher-capacity models.
 - The increased variance of FT-Transformer indicates higher sensitivity to sampled training distributions under repeated experiments.
 
-A summary file is also saved:
 
-- `feature_B_split_summary.csv`
